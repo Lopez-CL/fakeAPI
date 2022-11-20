@@ -37,9 +37,11 @@ const createCompany = ()=>{
 
 app.get('/api/users/new',(req,res) =>{
     const newUser = createUser();
+    console.log(req);
+    console.log(newUser);
     res.json(newUser);
 })
-app.get('/api/company/company',(req,res) =>{
+app.get('/api/company/new',(req,res) =>{
     const newCompany = createCompany();
     res.json(newCompany);
     console.log(newCompany.name)
